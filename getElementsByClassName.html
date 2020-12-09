@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Elements By Class Name</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3">
+          <input type="text" class="classe1" class="form-control" />
+        </div>
+        <div class="col-3">
+          <input type="text" class="classe2" class="form-control" />
+        </div>
+        <div class="col-3">
+          <input type="text" class="classe1 classe3" class="form-control" />
+        </div>
+        <div class="col-3">
+          <input type="text" class="classe1" class="form-control" />
+        </div>
+        <div class="col-3">
+          <input type="text" class="classe1" class="form-control" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //Quando sabemos que tem apenas um elemento com o name específico, podemos usar o indice zero
+      document.getElementsByClassName("classe2")[0].value =
+        "Elemento com classe 2";
+      document.getElementsByClassName("classe3")[0].value =
+        "Elemento com classe 3";
+
+      document.getElementsByClassName("classe1 classe3")[0].value =
+        "Elemento com classe 1 e 3";
+    </script>
+  </body>
+</html>
